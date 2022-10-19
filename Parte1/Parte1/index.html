@@ -1,0 +1,78 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Bastionado de la BIOS/UEFI</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="ID de Google Analytics"
+                  id="Parte1"
+                  title="Bastionado de la BIOS/UEFI"
+                  environment="web"
+                  feedback-link="Un enlace en el que los usuarios puedan darte feedback (quizás creando un issue en un repositorio de git)">
+    
+      <google-codelab-step label="Explicacion" duration="5">
+        <p> Los parametros a configurar para que la BIOS/UEFI sean mas seguras son los mencionados en esta lista a continuacion: </p>
+<ul>
+<li>La contraseña de administración de la BIOS/UEFI </li>
+<li>La contraseña de usuario de la BIOS/UEFI </li>
+<li>Contraseña de arranque del dispositivo </li>
+<li>Permisos para arranque desde dispositivos USB </li>
+<li>Orden de arranque </li>
+<li>Secure Boot(Arranque seguro) </li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Contraseñas" duration="5">
+        <h2 is-upgraded>BIOS </h2>
+<p>A continuacion pongo una imagen mostrando la BIOS/UEFI de mi pórtatil la cual es un ASUS, para acceder a este menu he tenido que pulsar F2 mientras lo encendía. <img alt="Prueba_imagen" src="img\\45da82ce4a53f110.jpg"></p>
+<h2 is-upgraded>Contraseñas de Administrador y Usuario </h2>
+<p>La siguiente imagen es en el menu avanzado de la BIOS/UEFI a la cual se accede pulsando F7, aqui podemos habilitar tanto las contraseñas de administrador como las de usuario, solo cuando esta habilitada la contraseña de usuario se necesita utilizar esa contraseña para encender el ordenador.  <img alt="Imagen2" src="img\\7097b2e276f633b6.jpg">  </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Permisos de arranque" duration="5">
+        <h2 is-upgraded>USB </h2>
+<p>Para este ajuste he tenido que utilizar otra BIOS/UEFI ya que la mía no tenía esta opción. Esta BIOS/UEFI es de un LENOVO. Cuando esta opción esta habilitada, se puede utilizar un USB para encender el ordenador con un sistema operativo que esta instalado en ese USB. Por lo tanto al deshabilitarlo ya no sera posible. <img alt="Imagen3" src="img\\1aa4503985f7973e.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Arranque" duration="5">
+        <h2 is-upgraded>Orden de arranque(Boot Priority) </h2>
+<p>Esta opcion permite cuando se tiene varios sistemas operativos en el sistema o algun dispositivo conectado el elegir cual se iniciaria primero en cuanto se encienda el dispositivo, a continuación pongo un ejemplo en el cual tengo dos sistemas operativos, un Windows y un Ubuntu. <img alt="Imagen4" src="img\\a97806a3ae94abda.jpg"></p>
+<h2 is-upgraded>Arranque seguro(Secure Boot) </h2>
+<p>El Arranque seguro es un sistema que impide la ejecucion de cualquier programa no certificado al encender el sistema. Para habilitarlo se tiene que ir a donde se va a mostrar a continuacion y se habilita. <img alt="Imagen5" src="img\\2cb9a746fe6edbea.jpg"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

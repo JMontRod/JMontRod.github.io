@@ -1,0 +1,26 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-10-14T12:07:39+02:00",
+  "id": "Parte1",
+  "duration": 20,
+  "title": "Bastionado de la BIOS/UEFI",
+  "summary": "Resumen del CodeLab",
+  "source": ".\\prueba.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "Un enlace en el que los usuarios puedan darte feedback (quizás creando un issue en un repositorio de git)",
+  "ga": "ID de Google Analytics",
+  "url": "Parte1"
+}
