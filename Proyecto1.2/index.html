@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Bastionado del GRUB de debian</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="ID de Google Analytics"
+                  id="Parte2"
+                  title="Bastionado del GRUB de debian"
+                  environment="web"
+                  feedback-link="Un enlace en el que los usuarios puedan darte feedback (quizás creando un issue en un repositorio de git)">
+    
+      <google-codelab-step label="Explicacion" duration="5">
+        <p> Los parametros a configurar para que el GRUB sea mas seguro son los mencionados en esta lista a continuacion: </p>
+<ul>
+<li>Contraseña de arranque de GRUB </li>
+<li>Ocultar Grub </li>
+<li>Copia de seguridad  </li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Contraseña de arranque de GRUB" duration="5">
+        <h2 is-upgraded>BIOS </h2>
+<p>Para empezar he creado una contraseña la cual he cifrado utilizando el comando grub-mkpasswd-pbkdf2 <img alt="Prueba_imagen3" src="img\\fc817cc57c18066a.jpg">  Una vez tengo creada esta contraseña la añado al /etc/grub.d/40_custom mientras que a la vez establezco a root como el superusuario <img alt="Prueba_imagen" src="img\\a26370eefad363.jpg">  Despues de haber hecho esto lo que hay que hacer es actualizar la grub con el siguiente comando </p>
+<p class="image-container"><img alt="Grub_update" src="img\\cad049391956d411.jpg"></p>
+<p>Si queremos que despues de esto solo root pueda configurar estos archivos podemos hacerlo con el siguiente comando </p>
+<p class="image-container"><img alt="Root_per" src="img\\fdffaddcab7ed708.jpg">   </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ocultar Grub" duration="5">
+        <p>Para ocultar el Grub cuando se inicia el equipo se puede hacer configurando el /etc/default/grub </p>
+<p class="image-container"><img alt="Oculta" src="img\\ee903bb2713ab1c6.jpg"></p>
+<p>Despues de hacer esto se actualiza el grub de la misma forma que antes  </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Copia de seguridad" duration="0">
+        <p>Para hacer una copia de seguridad del GRUB es muy sencillo solo hay que seguir los siguientes comandos </p>
+<p class="image-container"><img alt="Copia" src="img\\673f2a743f017126.jpg"></p>
+<p>Con estos comandos haces lo siguiente: </p>
+<ol type="1">
+<li>Creas el directorio que guarde la copia de seguridad </li>
+<li>Copias la configuración de grub en ese directorio </li>
+<li>Copias la configuracion de grub.d en ese directorio </li>
+</ol>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
